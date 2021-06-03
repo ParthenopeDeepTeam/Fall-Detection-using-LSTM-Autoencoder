@@ -37,7 +37,9 @@
   <h3 align="center">FALL DETECTION USING LSTM AUTOENCODER</h3>
 
   <p align="center">
-    project_description
+    Even if it's not well known, falling is one of the causes for accidental injury for most of the elderly people over 65 years old. If the fall incidents are not detected in a timely manner, they could lead to serious injury.\\
+A system which detects abnormal events (such as falls) only using camera streams, without requiring extra sensors, could provide timely aid by triggering an alarm. In this work, we provide a solution using an LSTM Autoencoder, that's one of the most used machine learning algorithm for anomaly detection. After applying a real-time pose estimation framework, called OpenPose, to the real-time video source, the poses are preprocessed by different steps, in order to be normalized and filtered, and then processed by an LSTM Autoencoder.\\
+The model is trained to learn the normal behaviour of a walking person through a large dataset of 19 joint points of human body. If the autoencoder generates an output which is too different from the corrispondent input, it means that the time window that was given to the model is an anomaly, meaning the person is falling.
     <br />
     <a href="https://github.com/github_username/repo_name">View Demo</a>
     ·
