@@ -6,22 +6,22 @@ import numpy as np
 # skeleton_keypoints è l'intero dataset
 
 _NUM_KEYPOINTS = 19
-_X_SIZE = 2304
-_Y_SIZE = 1296
+_X_SIZE = 2304 #1920  
+_Y_SIZE = 1296 #1080
 _Q_FACTOR = 5       # quantization factor
 
 def load_data(path):
     skeletons_keypoints = []
 
     if path=='Test-Set':
-        directories = ['Mixed-Falls', 'Mixed-Falls-Mirrored', 'Mixed-Falls-2', 'Mixed-Falls-2-Mirrored']
-    else:
+        directories = ['Mixed-Falls', 'Mixed-Falls-Mirrored', 'Mixed-Falls-2', 'Mixed-Falls-2-Mirrored'] # ['Kids', 'Kids-Mirrored']
+    elif path=='Train-Set':
         directories = ['Random-Walk', 'Random-Walk-Mirrored', 'Slow-Walk-2', 'Slow-Walk-2-Mirrored', 'Slow-Walk', 'Slow-Walk-Mirrored', 'Still', 'Still-Mirrored',
                     'Mom-Walk', 'Mom-Walk-Mirrored', 'Running-Exercises', 'Running-Exercises-Mirrored','Obstacle', 'Obstacle-Mirrored']
         #'Mixed-Walk', 'Mixed-Walk-Mirrored','Exercise-Obstacles', 'Exercise-Obstacles-Mirrored', 'Lifting-Objects', 'Lifting-Objects-Mirrored'] 
         #'Mixed-Walk', 'Mixed-Walk-Mirrored','Exercise-Obstacles', 'Exercise-Obstacles-Mirrored', 'Lifting-Objects', 'Lifting-Objects-Mirrored',]
         #directories = ['Random-Walk', 'Slow-Walk-2', 'Slow-Walk', 'Still', 'Mom-Walk', 'Mixed-Walk', 'Obstacle', 'Running-Exercises', 'Exercise-Obstacles', 'Lifting-Objects']
-    
+
     for dir in directories:    
         sub_dir = (os.path.join(path,dir)) # Full path of each directory
         print("Loading data from " + sub_dir)

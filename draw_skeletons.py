@@ -9,6 +9,9 @@ from subprocess import call
 import argparse
 
 
+_X_SIZE = 1920 #2304
+_Y_SIZE = 1080 #1296
+
 def __draw_limbs(image, keypoints_x, keypoints_y):
 	chest = [(1,2), (1,5), (1,8), (2,3), (5,6), (6,7), (3,4)]
 	head_neck = [(0,15), (0,16), (0,1)]
@@ -40,21 +43,10 @@ def draw_skeleton(skeleton_keypoints, batch_index, frame_index, path="Batches"):
 		else:
 			keypoints_y.append(int(skeleton_keypoints[i]*300))
 
-	image = np.zeros((2304, 1296), np.uint8)
-
-	# Trasformation into the image center
-	# x = np.array(keypoints_x)
-	# y = np.array(keypoints_y)
-
-	# Calculate centroids
-	# cx = int(np.sum(x) / np.count_nonzero(x))
-	# cy = int(np.sum(y) / np.count_nonzero(y))
+	image = np.zeros((_X_SIZE, _Y_SIZE), np.uint8)
 
 	h, w = image.shape[:2]
-	# Since the origin (0,0) is in the top-left corner, for viewing purpose we traslate once again, this time into the middle (h/2,w/2)
 	image = cv2.cvtColor(image, cv2.COLOR_GRAY2RGB)
-	# Center of gravity
-	#cv2.circle(image, (cx, cy), radius=4, color=(0, 255, 0), thickness=3)
 	
 	# Draw centered skeleton keypoints
 	for i in range(len(keypoints_x)):
@@ -77,43 +69,8 @@ def draw_skeleton(skeleton_keypoints, batch_index, frame_index, path="Batches"):
 	cv2.imwrite(sub_dir + "/frame_" + str(frame_index) + ".png", image)
 
 
-# def trasformation(skeleton_keypoints):
-#     # Skeletons given to the model are always centered in the origin (0,0). In such a way we make the network position-invariant
-#     keypoints_x = []
-#     keypoints_y = []
-#     new_skeletons = skeleton_keypoints
-    
-#     for skeleton in new_skeletons:
-#         del skeleton[2::3]  # Get rid of the scores
-#         cx = 0
-#         cy = 0
-
-#         # Calculate the center of the current skeleton as its center of gravity. Precautions are taken so that we
-#         # divide by the number of non-null keypoints
-#         for i in range(len(skeleton)):
-#             if i%2==0:
-#                 keypoints_x.append(int(skeleton[i]))
-#             else:
-#                 keypoints_y.append(int(skeleton[i]))
-            
-#         x = np.array(keypoints_x)
-#         y = np.array(keypoints_y)
-#         cx = int(np.sum(x)/np.count_nonzero(x))
-#         cy = int(np.sum(y)/np.count_nonzero(y))
-
-#         for i in range(len(skeleton)):
-#             if i%2==0:
-#                 skeleton[i] -= cx
-#             else:
-#                 skeleton[i] -= cy
-
-#         keypoints_x = []
-#         keypoints_y = []
-#     return new_skeletons
-
-
 def generate_video(path):
-	 # Generate a video for each batch of frames
+	 # Generate a video for each batch of frames, requires ffmpeg plugin
 	for folder in os.listdir('./'+path):
 		print("Writing video for batch: " + folder)
 		call(['ffmpeg', '-framerate', '10', '-i', path + "/" + str(folder) + '/frame_%01d.png',

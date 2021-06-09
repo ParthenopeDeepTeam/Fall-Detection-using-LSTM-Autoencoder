@@ -18,6 +18,7 @@ from datetime import datetime
 from math import floor
 
 def get_preprocessed_data(path):
+    start_time = datetime.utcnow()
     skeletons_keypoints = load_data(path=path)
     skeletons_keypoints = remove_low_scoring_keypoints(skeletons_keypoints)
     skeletons_keypoints = remove_null_skeleton(skeletons_keypoints)
@@ -26,8 +27,9 @@ def get_preprocessed_data(path):
     # we don't need them anymore
     skeletons_keypoints = normalization(skeletons_keypoints)
     batched_scheletons = data_windowing(skeletons_keypoints, overlap=1.5)
-
+    time_delta = datetime.utcnow() - start_time
     print(len(batched_scheletons), "total windows")
+    print("Average execution time for preprocessing:", time_delta.total_seconds() / np.array(batched_scheletons).shape[0])
 
     return np.array(batched_scheletons)
 
@@ -36,15 +38,15 @@ def load_model(timesteps, n_features, lr = 0.001, architecture='shallow'):
     model = Sequential()
     if architecture == 'shallow': # Shallow architecture
         # ENCODER
-        model.add(LSTM(128, activation='relu', input_shape=(timesteps, n_features), return_sequences=True))
-        model.add(LSTM(64, activation='relu', return_sequences=False))
+        model.add(LSTM(64, activation='relu', input_shape=(timesteps, n_features), return_sequences=True))
+        model.add(LSTM(32, activation='relu', return_sequences=False))
         # -------
         # BRIDGE FROM ENCODER TO DECODER
         model.add(RepeatVector(timesteps))
         # -------
         # DECODER
+        model.add(LSTM(32, activation='relu', return_sequences=True))
         model.add(LSTM(64, activation='relu', return_sequences=True))
-        model.add(LSTM(128, activation='relu', return_sequences=True))
         # -------
     elif architecture == 'deep': # Deep architecture
 
