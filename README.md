@@ -49,6 +49,7 @@ Even if it's not well known, falling is one of the causes for accidental injury 
   </p>
 </p>
 
+![](media/reconstructions.gif)
 
 
 <!-- TABLE OF CONTENTS -->
