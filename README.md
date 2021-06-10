@@ -24,10 +24,6 @@
 [![Contributors][contributors-shield]][contributors-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
-[![LinkedIn Andrea][linkedin-shield]][linkedin-andrea-url]
-[![LinkedIn - Antonio][linkedin-shield]][linkedin-antonio-url]
-
-
 
 <!-- PROJECT LOGO -->
 <br />
@@ -57,7 +53,7 @@ Even if it's not well known, falling is one of the causes for accidental injury 
     <li>
       <a href="#about-the-project">About The Project</a>
       <ul>
-        <li><a href="#built-with">Built With</a></li>
+        <li><a href="#frameworks">Built With</a></li>
       </ul>
     </li>
     <li>
@@ -108,9 +104,11 @@ This is an example of how to list things you need to use the software and how to
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email
+* Andrea: [![LinkedIn Andrea][linkedin-shield]][linkedin-andrea-url]
+* Antonio: [![LinkedIn Antonio][linkedin-shield]][linkedin-antonio-url]
 
-Project Link: [https://github.com/ParthenopeDeepTeam/Fall-Detection-using-LSTM-Autoencoder](https://github.com/ParthenopeDeepTeam/Fall-Detection-using-LSTM-Autoencoder)
+
+* Project Link: [https://github.com/ParthenopeDeepTeam/Fall-Detection-using-LSTM-Autoencoder](https://github.com/ParthenopeDeepTeam/Fall-Detection-using-LSTM-Autoencoder)
 
 
 
