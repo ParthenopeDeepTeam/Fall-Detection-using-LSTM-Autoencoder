@@ -20,10 +20,11 @@
 *** See the bottom of this document for the declaration of the reference variables
 *** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
+
 [![Contributors][contributors-shield]][contributors-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
+-->
 
 <!-- PROJECT LOGO -->
 <br />
@@ -65,7 +66,7 @@ Even if it's not well known, falling is one of the causes for accidental injury 
         <li><a href="#prerequisites">Prerequisites</a></li>
       </ul>
     </li>
-    <li><a href="#contact">Contact</a></li>
+    <li><a href="#contacts">Contacts</a></li>
     <li><a href="#acknowledgements">Acknowledgements</a></li>
   </ol>
 </details>
@@ -117,10 +118,10 @@ This is an example of how to list things you need to use the software and how to
 
 
 <!-- CONTACT -->
-## Contact
+## Contacts
 
-* Andrea: [![LinkedIn Andrea][linkedin-shield]][linkedin-andrea-url]
-* Antonio: [![LinkedIn Antonio][linkedin-shield]][linkedin-antonio-url]
+* Andrea: [LinkedIn][linkedin-andrea-url]
+* Antonio: [LinkedIn][linkedin-antonio-url]
 
 
 * Project Link: [https://github.com/ParthenopeDeepTeam/Fall-Detection-using-LSTM-Autoencoder](https://github.com/ParthenopeDeepTeam/Fall-Detection-using-LSTM-Autoencoder)
