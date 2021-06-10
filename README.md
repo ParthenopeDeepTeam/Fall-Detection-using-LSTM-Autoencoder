@@ -102,6 +102,30 @@ We proposed, in our study, different shallow and deep models. Better performance
 * [Openpose](https://github.com/CMU-Perceptual-Computing-Lab/openpose)
 
 
+<!-- DATASET STRUCTURE -->
+## Dataset structure
+
+<p align="justify">
+Before training, you have to set up the dataset directory in a precise manner. The preprocessing stage takes two different datasets, the train set and the test set. Each one is a directory of directories, and the preprocessing procedure scans every directory in alphabetical order or the order speicified in the code (the order of the list of string that represents the name of directories), collecting all the json.
+</p>
+
+```
+Dataset
+├── Train-Set
+│   ├── Dir_1
+│   │   └── json data
+│   ├── ...
+│   │   └── ...
+│   └── Dir_N
+│       ├── json data
+├── Test-Set
+│   ├── Dir_1
+│   │   └── json data
+│   ├── ...
+│   │   └── ...
+│   └── Dir_N
+│       ├── json data
+```
 
 <!-- GETTING STARTED -->
 ## Getting Started
