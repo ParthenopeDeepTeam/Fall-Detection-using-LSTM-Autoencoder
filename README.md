@@ -95,7 +95,7 @@ Hence the base kind of model used for this study is an Autoencoder with LSTM lay
     <br>
 </p>
 
-We proposed, in our study, different shallow and deep models. Better performance area reached with shallow models with few units per layer, e.g. an autoencoder with [63, 32] - [32, 64] architecture, as in the figure.
+We proposed, in our study, different shallow and deep models. Better performance were reached with shallow models with few units per layer, e.g. an autoencoder with [63, 32] - [32, 64] architecture, as in the figure.
 </p>
 
 ### Frameworks
