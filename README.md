@@ -22,10 +22,10 @@
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
 [![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
+[![LinkedIn Andrea][linkedin-shield]][linkedin-andrea-url]
+[![LinkedIn - Antonio][linkedin-shield]][linkedin-antonio-url]
 
 
 
@@ -33,7 +33,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/ParthenopeDeepTeam/Fall-Detection-using-LSTM-Autoencoder">
-    <img src="media/background.png" alt="Logo" width="500" height="340">
+    <img src="media/background.png" alt="Logo" width="400" height="240">
   </a>
 
   <h3 align="center">Abstract</h3>
@@ -85,9 +85,9 @@ Here's a blank template to get started:
 
 ### Frameworks
 
-* [Keras/Tensorflow 2.0]()
-* [Python 3.7]()
-* [Openpose]()
+* [Keras/Tensorflow 2.0](https://www.tensorflow.org/)
+* [Python 3.7](https://www.python.org/downloads/release/python-370/)
+* [Openpose](https://github.com/CMU-Perceptual-Computing-Lab/openpose)
 
 
 
@@ -129,11 +129,10 @@ Project Link: [https://github.com/ParthenopeDeepTeam/Fall-Detection-using-LSTM-A
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [contributors-shield]: https://img.shields.io/github/contributors/github_username/repo.svg?style=for-the-badge
 [contributors-url]: https://github.com/ParthenopeDeepTeam/Fall-Detection-using-LSTM-Autoencoder/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/github_username/repo.svg?style=for-the-badge
-[forks-url]: https://github.com/github_username/repo/network/members
 [stars-shield]: https://img.shields.io/github/stars/github_username/repo.svg?style=for-the-badge
 [stars-url]: https://github.com/github_username/repo/stargazers
 [issues-shield]: https://img.shields.io/github/issues/github_username/repo.svg?style=for-the-badge
-[issues-url]: https://github.com/github_username/repo/issues
+[issues-url]: https://github.com/ParthenopeDeepTeam/Fall-Detection-using-LSTM-Autoencoder/issues
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/github_username
+[linkedin-andrea-url]: https://www.linkedin.com/in/andrea-lombardi/
+[linkedin-antonio-url]: https://www.linkedin.com/in/antonio-junior-spoleto/
