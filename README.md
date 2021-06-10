@@ -29,13 +29,13 @@
 <br />
 <p align="center">
   <a href="https://github.com/ParthenopeDeepTeam/Fall-Detection-using-LSTM-Autoencoder">
-    <img src="media/background.png" alt="Logo" width="400" height="240">
+    <img src="media/logo_fall_detection_with_name.jpg" alt="Logo" width="400">
   </a>
 
   <h3 align="center">Abstract</h3>
 
   <p align="justify">
-Even if it's not well known, falling is one of the causes for accidental injury for most of the elderly people over 65 years old. If the fall incidents are not detected in a timely manner, they could lead to serious injury. Moreover, such incidents can happen in outdoor environments, such as parking lots, where the probability of being noticed and receive punctual help is even smaller. A system which detects abnormal events (such as falls) only using camera streams, without requiring extra sensors, could provide timely aid by triggering an alarm. In this work, we provide a solution using an LSTM Autoencoder which is one of the most used machine learning algorithm for anomaly detection. After applying a real-time pose estimation framework, called OpenPose, to the real-time video source, the poses are preprocessed by different steps in order to be normalized and filtered, and then processed by an LSTM Autoencoder. The model is trained to learn the normal behaviour of a walking person through a large dataset of 19 joint points of human body. If the autoencoder generates an output which is too different from the corrispondent input, it means that the time window that was given to the model is an anomaly, meaning the person is falling.
+Even if it's not well known, falling is one of the causes for accidental injury for most of the elderly people, and if the fall incidents are not detected in a timely manner, they could lead to serious injury. Moreover, such incidents can happen in outdoor environments, such as parking lots, where the probability of being noticed and receive punctual help is even smaller. In this work, we provide a solution using an LSTM Autoencoder. After applying a real-time pose estimation framework, called OpenPose, to the real-time video source, the poses are preprocessed by different steps in order to be normalized and filtered, and then processed by an LSTM Autoencoder. The model is trained to learn the normal behaviour of a walking person through a large dataset of 19 joint points of human body. If the autoencoder generates an output which is too different from the corrispondent input, it means that the time window that was given to the model is an anomaly, meaning the person is falling.
     <br />
 </p>
 
@@ -76,17 +76,22 @@ Even if it's not well known, falling is one of the causes for accidental injury 
 ## About The Project
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
-
+<p align="justify">
 In this work we propose a system that monitors the pose of people in a scene only through a traditional camera, and learns the way the user behaves. The system would learn patterns over time and would therefore be capable of building a solid knowledge of what a normal pose behaviour is, and what it isn't (in particular, falling events).
 Both train set and test set were made ad-hoc for this work, in order to build a dataset that represents a specific task: video surveillance in places like pedestrian areas, parking lots and parks of various type. So video footages are setted up to capture a large area, with the camera installed at about 3 meters of heigth.
+</p>
 
 ### Proposed models
 
+<p align="justify">
 Researches show that LSTM Autoencoders and similar models led to promising results in detecting anomalous temporal events in a semi-supervised manner. The idea of training a model with only "normal events" is important because, in nature, abnormal instances occur very rarely, therefore the acquirement of such data is expensive.
 Hence the base kind of model used for this study is an Autoencoder with LSTM layers as its elementary units as showed in the figure below. Throughout the model selection phase various model architectures have been tried and tested in order to find the best one.
 <p align="center">
-    <img src="https://github.com/ParthenopeDeepTeam/Fall-Detection-using-LSTM-Autoencoder/blob/main/media/architecture.png" width="530">
+    <img src="https://github.com/ParthenopeDeepTeam/Fall-Detection-using-LSTM-Autoencoder/blob/main/media/architecture.png" width="580">
     <br>
+</p>
+
+We proposed, in our study, different shallow and deep models. Better performance area reached with shallow models with few units per layer, e.g. an autoencoder with [63, 32] - [32, 64] architecture, as in the figure.
 </p>
 
 ### Frameworks
