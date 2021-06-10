@@ -53,7 +53,10 @@ Even if it's not well known, falling is one of the causes for accidental injury 
     <li>
       <a href="#about-the-project">About The Project</a>
       <ul>
-        <li><a href="#frameworks">Built With</a></li>
+        <li><a href="#proposed-models">Proposed Models</a></li>
+      </ul>
+      <ul>
+        <li><a href="#frameworks">Frameworks</a></li>
       </ul>
     </li>
     <li>
@@ -78,6 +81,13 @@ In this work we propose a system that monitors the pose of people in a scene onl
 Both train set and test set were made ad-hoc for this work, in order to build a dataset that represents a specific task: video surveillance in places like pedestrian areas, parking lots and parks of various type. So video footages are setted up to capture a large area, with the camera installed at about 3 meters of heigth.
 
 ### Proposed models
+
+Researches show that LSTM Autoencoders and similar models led to promising results in detecting anomalous temporal events in a semi-supervised manner. The idea of training a model with only "normal events" is important because, in nature, abnormal instances occur very rarely, therefore the acquirement of such data is expensive.
+Hence the base kind of model used for this study is an Autoencoder with LSTM layers as its elementary units as showed in the figure below. Throughout the model selection phase various model architectures have been tried and tested in order to find the best one.
+<p align="center">
+    <img src="https://github.com/ParthenopeDeepTeam/Fall-Detection-using-LSTM-Autoencoder/blob/main/media/architecture.png" width="530">
+    <br>
+</p>
 
 ### Frameworks
 
