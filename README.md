@@ -65,6 +65,9 @@ Even if it's not well known, falling is one of the causes for accidental injury 
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
       </ul>
+      <ul>
+        <li><a href="#dataset-structure">Dataset structure</a></li>
+      </ul>
     </li>
     <li><a href="#contacts">Contacts</a></li>
     <li><a href="#acknowledgements">Acknowledgements</a></li>
@@ -102,8 +105,20 @@ We proposed, in our study, different shallow and deep models. Better performance
 * [Openpose](https://github.com/CMU-Perceptual-Computing-Lab/openpose)
 
 
+<!-- GETTING STARTED -->
+## Getting Started
+
+To get a local copy up and running follow these simple steps.
+
+### Prerequisites
+
+This is an example of how to list things you need to use the software and how to install them.
+* npm
+  ```sh
+  npm install npm@latest -g
+  ```
 <!-- DATASET STRUCTURE -->
-## Dataset structure
+### Dataset structure
 
 <p align="justify">
 Before training, you have to set up the dataset directory in a precise manner. The preprocessing stage takes two different datasets, the train set and the test set. Each one is a directory of directories, and the preprocessing procedure scans every directory in alphabetical order or the order speicified in the code (the order of the list of string that represents the name of directories), collecting all the json.
@@ -126,20 +141,6 @@ Dataset
 │   └── Dir_N
 │       ├── json data
 ```
-
-<!-- GETTING STARTED -->
-## Getting Started
-
-To get a local copy up and running follow these simple steps.
-
-### Prerequisites
-
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
-
 
 <!-- CONTACT -->
 ## Contacts
