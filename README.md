@@ -101,7 +101,7 @@ We proposed, in our study, different shallow and deep models. Better performance
 ### Reconstruction error
 Illustration of different learning behaviours in the movements with MSE and MAE. 
 <p align="center">
-    <img src="media/reconstructions.gif" width="480">
+    <img src="media/reconstructions.gif" width="576">
     <br>
 </p>
 
