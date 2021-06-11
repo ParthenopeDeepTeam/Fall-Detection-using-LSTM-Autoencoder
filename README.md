@@ -42,12 +42,10 @@ The model is trained to learn the normal behaviour of a walking person through a
     <br />
 </p>
 
-<h3 align="center">Reconstruction error</h3>
 <p align="center">
-    <img src="media/reconstructions.gif" width="480">
+    <img src="media/inference.gif" width="576">
     <br>
 </p>
-
 
 <!-- TABLE OF CONTENTS -->
 <details open="open">
@@ -65,7 +63,7 @@ The model is trained to learn the normal behaviour of a walking person through a
     <li>
       <a href="#getting-started">Getting Started</a>
       <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#code-structure">Code structure</a></li>
       </ul>
       <ul>
         <li><a href="#dataset-structure">Dataset structure</a></li>
@@ -99,6 +97,14 @@ Hence the base kind of model used for this study is an Autoencoder with LSTM lay
 We proposed, in our study, different shallow and deep models. Better performance were reached with shallow models with few units per layer, e.g. an autoencoder with [63, 32] - [32, 64] architecture, as in the figure.
 </p>
 
+
+### Reconstruction error
+Illustration of different learning behaviours in the movements with MSE and MAE. 
+<p align="center">
+    <img src="media/reconstructions.gif" width="480">
+    <br>
+</p>
+
 ### Frameworks
 
 * [Keras/Tensorflow 2.0](https://www.tensorflow.org/)
@@ -111,6 +117,8 @@ We proposed, in our study, different shallow and deep models. Better performance
 
 Istructions for code and data are down below.
 
+
+<!-- CODE STRUCTURE -->
 ### Code structure
 
 ```
@@ -155,10 +163,6 @@ Dataset
 
 * Andrea: [LinkedIn][linkedin-andrea-url]
 * Antonio: [LinkedIn][linkedin-antonio-url]
-
-
-* Project Link: [https://github.com/ParthenopeDeepTeam/Fall-Detection-using-LSTM-Autoencoder](https://github.com/ParthenopeDeepTeam/Fall-Detection-using-LSTM-Autoencoder)
-
 
 
 <!-- ACKNOWLEDGEMENTS -->
