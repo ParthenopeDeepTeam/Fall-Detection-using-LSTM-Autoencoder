@@ -42,7 +42,7 @@ Even if it's not well known, falling is one of the causes for accidental injury 
 
 <h3 align="center">Reconstruction error</h3>
 <p align="center">
-    <img src="https://github.com/ParthenopeDeepTeam/Fall-Detection-using-LSTM-Autoencoder/blob/main/media/reconstructions.gif" width="480">
+    <img src="media/reconstructions.gif" width="480">
     <br>
 </p>
 
@@ -90,7 +90,7 @@ Both train set and test set were made ad-hoc for this work, in order to build a 
 Researches show that LSTM Autoencoders and similar models led to promising results in detecting anomalous temporal events in a semi-supervised manner. The idea of training a model with only "normal events" is important because, in nature, abnormal instances occur very rarely, therefore the acquirement of such data is expensive.
 Hence the base kind of model used for this study is an Autoencoder with LSTM layers as its elementary units as showed in the figure below. Throughout the model selection phase various model architectures have been tried and tested in order to find the best one.
 <p align="center">
-    <img src="https://github.com/ParthenopeDeepTeam/Fall-Detection-using-LSTM-Autoencoder/blob/main/media/architecture.png" width="580">
+    <img src="media/architecture.png" width="580">
     <br>
 </p>
 
