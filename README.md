@@ -36,7 +36,9 @@
   <h3 align="center">Abstract</h3>
 
   <p align="justify">
-Even if it's not well known, falling is one of the causes for accidental injury for most of the elderly people, and if the fall incidents are not detected in a timely manner, they could lead to serious injury. Moreover, such incidents can happen in outdoor environments, such as parking lots, where the probability of being noticed and receive punctual help is even smaller. In this work, we provide a solution using an LSTM Autoencoder. After applying a real-time pose estimation framework, called OpenPose, to the real-time video source, the poses are preprocessed by different steps in order to be normalized and filtered, and then processed by an LSTM Autoencoder. The model is trained to learn the normal behaviour of a walking person through a large dataset of 19 joint points of human body. If the autoencoder generates an output which is too different from the corrispondent input, it means that the time window that was given to the model is an anomaly, meaning the person is falling.
+Even if it's not well known, falling is one of the causes for accidental injury for most of the elderly people over 65 years old. If the fall incidents are not detected in a timely manner, they could lead to serious injury. Moreover, such incidents can happen in outdoor uncontrolled environments, such as parking lots and limited-access roads, where the probability of being noticed and receive punctual help is even smaller.
+A system which detects abnormal events (such as falls) only using camera streams, without requiring extra sensors, could provide timely aid by triggering an alarm. In this work, we provide a solution using an LSTM Autoencoder which is one of the most used machine learning algorithm for anomaly detection. After applying a real-time pose estimation framework, called OpenPose, to the real-time video source, the generated poses undergo some preprocessing steps (filtering, normalization, quantization, windowing etc.) before being inputted to an LSTM Autoencoder.
+The model is trained to learn the normal behaviour of a walking person through a large and heterogeneous dataset of 19 joint points of human body actions. At testing time, if the autoencoder generates an output which is too different from the corrispondent input, it means that the time window given to the model is an anomaly, meaning the person is falling.
     <br />
 </p>
 
@@ -81,7 +83,7 @@ Even if it's not well known, falling is one of the causes for accidental injury 
 
 <p align="justify">
 In this work we propose a system that monitors the pose of people in a scene only through a traditional camera, and learns the way the user behaves. The system would learn patterns over time and would therefore be capable of building a solid knowledge of what a normal pose behaviour is, and what it isn't (in particular, falling events).
-Both train set and test set were made ad-hoc for this work, in order to build a dataset that represents a specific task: video surveillance in places like pedestrian areas, parking lots and parks of various type. So video footages are setted up to capture a large area, with the camera installed at about 3 meters of heigth.
+Both training set and test set were made ad-hoc for this work, in order to build a dataset that represents a specific task: video surveillance in places like pedestrian areas, parking lots and parks of various type. So video footages are set up to capture a large area, with the camera installed at about 3 meters of heigth.
 </p>
 
 ### Proposed models
@@ -107,15 +109,22 @@ We proposed, in our study, different shallow and deep models. Better performance
 <!-- GETTING STARTED -->
 ## Getting Started
 
-To get a local copy up and running follow these simple steps.
+Istructions for code and data are down below.
 
-### Prerequisites
+### Code structure
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
+```
+src
+├── draw_skeletons.py
+│   ──> contains procedures for generating images/videos from skeleton data
+├── preprocessing.py
+│   ──> contains all the preprocessing functions
+├── model_and_training.py
+│   ──> contains the model architectures and training procedure
+├── evaluation.py 
+│   ──> contains all the metrics and functions used for evaluating the model
+```
+
 <!-- DATASET STRUCTURE -->
 ### Dataset structure
 
@@ -155,9 +164,8 @@ Dataset
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
 
-* []()
-* []()
-* []()
+* [Thomas Gatt](https://ieeexplore.ieee.org/document/8868795)
+
 
 
 
