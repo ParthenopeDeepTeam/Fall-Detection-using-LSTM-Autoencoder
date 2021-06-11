@@ -90,7 +90,7 @@ Both train set and test set were made ad-hoc for this work, in order to build a 
 Researches show that LSTM Autoencoders and similar models led to promising results in detecting anomalous temporal events in a semi-supervised manner. The idea of training a model with only "normal events" is important because, in nature, abnormal instances occur very rarely, therefore the acquirement of such data is expensive.
 Hence the base kind of model used for this study is an Autoencoder with LSTM layers as its elementary units as showed in the figure below. Throughout the model selection phase various model architectures have been tried and tested in order to find the best one.
 <p align="center">
-    <img src="media/architecture.png" width="580">
+    <img src="media/architecture.png" width="600">
     <br>
 </p>
 
