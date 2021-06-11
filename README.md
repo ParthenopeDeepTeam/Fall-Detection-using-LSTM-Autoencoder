@@ -79,7 +79,6 @@ Even if it's not well known, falling is one of the causes for accidental injury 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
 <p align="justify">
 In this work we propose a system that monitors the pose of people in a scene only through a traditional camera, and learns the way the user behaves. The system would learn patterns over time and would therefore be capable of building a solid knowledge of what a normal pose behaviour is, and what it isn't (in particular, falling events).
 Both train set and test set were made ad-hoc for this work, in order to build a dataset that represents a specific task: video surveillance in places like pedestrian areas, parking lots and parks of various type. So video footages are setted up to capture a large area, with the camera installed at about 3 meters of heigth.
