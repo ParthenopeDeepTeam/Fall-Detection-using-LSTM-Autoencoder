@@ -42,6 +42,8 @@ The model is trained to learn the normal behaviour of a walking person through a
     <br />
 </p>
 
+<h5 align="center">Inference test on a 6 seconds scene (2 windows):</h5>
+
 <p align="center">
     <img src="media/inference.gif" width="576">
     <br>
